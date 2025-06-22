@@ -181,7 +181,7 @@ section h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("images/download.jpg") center center / cover no-repeat;
+  background: url("/images/download.jpg") center center / cover no-repeat;
   filter: brightness(0.4) blur(3px);
   z-index: 0;
 }
