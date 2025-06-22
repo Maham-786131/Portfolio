@@ -1,0 +1,288 @@
+/* ===== Root Variables ===== */
+:root {
+  --primary-color: #4b0082; /* Indigo */
+  --secondary-color: #7a4988; /* Plum */
+  --accent-color: #ebd8ff; /* Lavender */
+  --light-bg: #dac2ff; /* Off-white lavender */
+  --text-color: #1e1b29; /* Deep Charcoal */
+  --white: #ffffff;
+  --border-radius: 0.75rem;
+  --transition-speed: 0.3s;
+}
+
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Container & Section ===== */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+section {
+  padding: 4rem 0;
+}
+section h2 {
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.section-primary {
+  background-color: var(--light-bg);
+  color: var(--white);
+}
+
+.section-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.section-accent {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.section-white {
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+.section-light-bg {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+/* ===== Navbar (Lavender Indigo Theme) ===== */
+.navbar {
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+  color: var(--secondary-color);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+.custom-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+.custom-toggler-icon span {
+  display: block;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Social Icons */
+.navbar .nav-link i {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link i:hover {
+  color: var(--primary-color);
+}
+
+/* Navbar */
+/* .navbar-brand,
+.navbar-nav .nav-link,
+.navbar .nav-link i {
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar .nav-link i:hover {
+  color: var(--text-color) !important;
+}
+
+.navbar-toggler-icon {
+  display: none;
+} */
+
+/* Custom Hamburger Icon */
+/* .custom-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.custom-toggler-icon span {
+  display: block;
+  height: 3px;
+  background-color: white; 
+  border-radius: 2px;
+} */
+
+/* Carousel Caption */
+/* .carousel-caption {
+  background-color: rgba(13, 27, 42, 0.6); 
+  padding: 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+} */
+/* Fullscreen header */
+#hero {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Background image with blur + dim */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/download.jpg") center center / cover no-repeat;
+  filter: brightness(0.4) blur(3px);
+  z-index: 0;
+}
+
+/* Glassmorphism effect box */
+.glass-box {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(45deg, #69b6f5, #ff8ad4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Make sure z-index is managed */
+.z-1 {
+  z-index: 2;
+}
+
+/* Section Headers */
+section h2 {
+  margin-bottom: 1rem;
+}
+/* .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+} */
+
+section {
+  padding: 60px 0;
+}
+/* about section */
+.glass-card {
+  background: var(--white);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* project */
+.project-card:hover {
+  transform: translateY(-6px);
+  transition: all 0.3s ease-in-out;
+}
+.project-card .btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  background-color: var(--white);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.accordion-button {
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #f0f4ff;
+  color: #0f172a;
+} */
+
+/* Improve design for large screens */
+/* @media (min-width: 992px) {
+  .carousel-item img {
+    height: 550px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.25rem;
+  }
+} */
